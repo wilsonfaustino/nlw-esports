@@ -23,6 +23,12 @@ function App() {
             spacing: 24,
         },
         breakpoints: {
+            '(max-width: 768px)': {
+                slides: {
+                    perView: 3,
+                    spacing: 12,
+                },
+            },
             '(max-width: 500px)': {
                 slides: {
                     perView: 2,
