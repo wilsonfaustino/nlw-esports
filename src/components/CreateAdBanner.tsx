@@ -4,7 +4,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 export function CreateAdbanner() {
     return (
         <div className='pt-1 self-stretch rounded-lg overflow-hidden mt-8 bg-gradient-to-r from-blue-400 to-orange-500 via-purple-500 animate-gradient-x'>
-            <div className='bg-[#2A2634] px-8 py-6 rounded-t-lg flex justify-between items-center'>
+            <div className='bg-[#2A2634] px-8 py-6 rounded-t-lg md:flex justify-between items-center'>
                 <div>
                     <h2 className='text-2xl text-white font-black'>Não encontrou o seu duo</h2>
                     <span className='text-zinc-400'>Publique um anúncio para encontrar novos players!</span>

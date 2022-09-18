@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-// import axios from 'axios'
 import * as Dialog from '@radix-ui/react-dialog'
 import { useKeenSlider } from 'keen-slider/react'
 
@@ -23,10 +22,17 @@ function App() {
             perView: 4,
             spacing: 24,
         },
+        breakpoints: {
+            '(max-width: 500px)': {
+                slides: {
+                    perView: 2,
+                    spacing: 12,
+                },
+            },
+        },
     })
 
     useEffect(() => {
-        // axios('./assets/List_Games-1663459612756.json').then((response) => setGames(response.data))
         setGames(gamesMock)
     }, [])
 
@@ -36,7 +42,7 @@ function App() {
             // Add event listener
             document.addEventListener('mousemove', parallax)
             const elem = parallaxRef.current
-            // Magic happens here
+            // Motion happens here
             function parallax(e: MouseEvent) {
                 let _w = window.innerWidth / 2
                 let _h = 0
@@ -62,9 +68,9 @@ function App() {
 
     return (
         <div ref={parallaxRef} className='w-full h-[100vh] fixed top-0 bg-parallax bg-no-repeat'>
-            <div className='max-w-[1344px] mx-auto flex flex-col items-center my-20'>
+            <div className='max-w-[1344px] mx-auto flex flex-col items-center my-20 px-5 md:px-5'>
                 <img src={logoNlw} alt='Logo NLW E Sports' className='animate-bounce' />
-                <h1 className='text-6xl text-white font-black mt-20'>
+                <h1 className='md:text-6xl text-white font-black mt-20 text-4xl'>
                     Seu{' '}
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-lime-400 via-purple-500 animate-gradient-x'>
                         duo
